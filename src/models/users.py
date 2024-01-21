@@ -3,7 +3,7 @@ from schemas.users import UserSchema
 
 from sqlalchemy.orm import Mapped, mapped_column
 
-class User(Base):
+class Users(Base):
 
     name: Mapped[str]
 
