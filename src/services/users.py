@@ -2,7 +2,7 @@ from schemas.users import UserSchemaAdd
 from utils.repository import AbstractRepository
 
 
-class UserService:
+class UsersService:
     def __init__(self, users_repo: AbstractRepository):
         self.users_repo: AbstractRepository = users_repo()
     
