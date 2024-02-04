@@ -17,6 +17,9 @@ async def add_tasks(
     tasks_service: Annotated[TasksServices, Depends(tasks_service)],
 ):
     task_id = await tasks_service.add_task(task)
+    return {
+        "task_id": task_id,
+    }
 
 
 @tasks_router("")

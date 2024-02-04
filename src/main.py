@@ -1,15 +1,16 @@
 import uvicorn
 
 from fastapi import FastAPI
-
-from routers import main_api_router
+ 
+from src.api.routers import all_routers
 
 
 app = FastAPI(
     title="Task traker"
 )
 
-app.include_router(main_api_router)
+for router in all_routers:
+    app.include_router(router)
 
 if __name__ == '__main__':
     uvicorn.run(app, host="0.0.0.0", port=8000)
