@@ -20,7 +20,7 @@ async def add_user(
         "user_id": user_id,
     }
 
-@users_service.get("")
+@users_router.get("")
 async def get_users(
     users_service: Annotated[UsersService, Depends(users_service)],
 ):

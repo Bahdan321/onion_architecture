@@ -22,7 +22,7 @@ async def add_tasks(
     }
 
 
-@tasks_router("")
+@tasks_router.get("")
 async def get_tasks(
     tasks_service: Annotated[TasksService, Depends(tasks_service)],
 ):
