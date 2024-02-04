@@ -1,7 +1,7 @@
 from schemas.tasks import TaskSchemaAdd
 from utils.repository import AbstractRepository
 
-class TasksServices:
+class TasksService:
     def __init__(self, tasks_repo: AbstractRepository):
         self.tasks_repo: AbstractRepository = tasks_repo()
     
